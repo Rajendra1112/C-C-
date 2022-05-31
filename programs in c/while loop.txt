@@ -1,0 +1,51 @@
+#include<stdio.h>
+int main()
+{
+int i,olwc1;
+int d[40];
+printf("enter the values:\n");
+for(i=0;i<4;i++)
+{
+    scanf("%d",&d[i]);
+
+            while(i==3)
+            {
+                if(d[i-3]>d[i-2])
+                {
+                    if(d[i-3]>d[i-1])
+                    {
+                        if(d[i-3]>d[i])
+                        {
+                           olwc1= d[i-3];
+                        }
+                        else
+                        {
+                            olwc1=d[i];
+                        }
+                    }
+                }
+                else if(d[i-2]>d[i-1])
+                {
+                    if(d[i-2]>d[i])
+                    {
+                        olwc1=d[i-2];
+                    }
+                    else
+                    {
+                        olwc1=d[i];
+                    }
+                }
+                else if(d[i-1]>d[i])
+                    {
+                        olwc1=d[i-1];
+                    }
+                else
+                {
+                    olwc1=d[i];
+                }
+                printf("\noveral lwc1=%d",olwc1);
+                i++;
+            }
+}
+return 0;
+}
